@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "struts-2.1.dtd" >
+<struts>
+	<!-- struts2的action必须放在一个指定的包空间下定义 -->
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="addUserAction" class="org.InterChat.Action.Action"
+			method="addUser">
+			<result name="success">/User/ReAddUser.jsp</result>
+			<result name="fail">/User/ReAddUser.jsp</result>
+		</action>
+		<action name="loginAction" class="org.InterChat.Action.Action"
+			method="login">
+			<result name="success">/index.jsp</result>
+			<result name="fail">/User/ReLogin.jsp</result>
+		</action>
+		<action name="logoutaction" class="org.InterChat.Action.LogOutAction"
+			method="logOut">
+			<result name="success">/Goto.jsp</result>
+		</action>
+		<action name="messageAction" class="org.InterChat.Action.MessageAction"
+			method="messageAction">
+		</action>
+
+		<action name="getMessageAction" class="org.InterChat.Action.MessageAction"
+			method="getMessageAction">
+
+		</action>
+
+		<action name="getUserInfo" class="org.InterChat.Action.UserAction"
+			method="getUserInfo">
+		</action>
+		
+		<action name="getUserList" class="org.InterChat.Action.UserAction"
+			method="getUserList">
+		</action>
+	</package>
+</struts>
